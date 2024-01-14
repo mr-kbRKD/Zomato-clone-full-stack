@@ -23,7 +23,7 @@ const FoodSchema = new mongoose.Schema(
             required: true,
         },
         photos: {
-            type: mongoose.Types.ObjectID,
+            type: mongoose.Types.ObjectId,
             ref: "images",
         },
 

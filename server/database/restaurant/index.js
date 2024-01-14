@@ -12,7 +12,7 @@ const RestaurantSchema = new mongoose.Schema(
         website: String,
         popularDishes: [String],
         averageCost: Number,
-        amenties: [String],
+        amenities: [String],
         menuImages: {
             type: mongoose.Types.ObjectId,
             ref: "images",
@@ -34,4 +34,4 @@ const RestaurantSchema = new mongoose.Schema(
     }
 );
 
-export const RestaurantModel = mongoose.Model("restaurants", RestaurantSchema);
+export const RestaurantModel = mongoose.model("restaurants", RestaurantSchema);
