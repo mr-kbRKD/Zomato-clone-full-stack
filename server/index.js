@@ -17,6 +17,7 @@ zomato.get("/", (req, res) => {
   });
 });
 
+
 zomato.use("/auth", Auth);
 
 
@@ -34,3 +35,4 @@ zomato.listen(PORT, () => {
 
   // console.log("Server is running !!!");
 });
+

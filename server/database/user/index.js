@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema(
 
   // attachments : capable of access data directly
     UserSchema.methods.generateJwtToken = function(){
-      return jwt.sign({ user : this._id.toString() }, "ShyamSundar");
+      return jwt.sign({ user : this._id.toString() }, "Shyamsundar");
     };
 
     // helper functions : not able to access data directly 
@@ -55,7 +55,7 @@ const UserSchema = new mongoose.Schema(
       if(!user.isModified("password")) return next();
 
       // generate bcrypt salt
-      bcrypt.genSalt(2, (error, salt) =>{
+      bcrypt.genSalt(8, (error, salt) =>{
         if (error) return next(error);
 
         // hash the password  
@@ -64,7 +64,7 @@ const UserSchema = new mongoose.Schema(
 
           // assigning hashed password
           user.password = hash;
-          return next;
+          return next();
         });
       });
     });
