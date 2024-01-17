@@ -2,7 +2,7 @@ import express from "express"
 
 import { FoodModel } from "../../database/food"
 
-const Router = express.router();
+const Router = express.Router();
 
 /**
  * Route : /:_id
